@@ -17,7 +17,12 @@ router.post("/displayStatistics", async (req, res) => {
 
         await Galaxy.create({ name: name });
 
-        res.render("displayStatistics", { stats: count, name: name });
+        let splitStr = name.toLowerCase().split(' ');
+        for (let i = 0; i < splitStr.length; i++) {
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+        }
+
+        res.render("displayStatistics", { stats: count, name: splitStr.join(' ') });
     } catch (e) {
         console.error(e);
         res.status(500).send("Error processing request");
