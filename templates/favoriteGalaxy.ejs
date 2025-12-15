@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Favorite Galaxy</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+        <%- include("header") %>
+
+        <form action="/favoriteGalaxy/displayStatistics" method="POST">
+            <p id="question"><strong>What's the name of your favorite galaxy?</strong></p> 
+            <input name="name" required>
+            <br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
