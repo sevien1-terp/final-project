@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Galaxy = require("../models/Galaxy");
+const Galaxy = require("../model/Galaxy");
 
 router.post("/displayStatistics", async (req, res) => {
     try {

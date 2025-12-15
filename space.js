@@ -20,6 +20,7 @@ const spaceRoutes = require("./routes/spaceRoutes");
 app.use("/favoriteGalaxy", spaceRoutes);
 
 app.get("/", async (req, res) => {
+    // Get random image from the api to display
     const response = await fetch("https://api.spacexdata.com/v5/launches");
     const data = await response.json();
     let img, name;
